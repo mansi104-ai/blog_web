@@ -4,7 +4,7 @@ import Image from 'next/image';
 function Logo(props:any){
     const{renderDefault, title} = props;
 
-    return(<div>
+    return(<div className='flex items-center space-x-2'>
       <Image 
         className = "rounded-full object-cover"
         width = {50}

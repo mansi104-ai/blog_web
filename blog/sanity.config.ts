@@ -10,8 +10,8 @@ import {structureTool} from 'sanity/structure'
 import {apiVersion, dataset, projectId} from './sanity/env'
 import {schema} from './schema'
 import { myTheme } from './theme'
-import StudioNavBar from './components/StudioNavBar'
-import Logo from './components/Logo'
+import StudioNavBar from './src/app/components/StudioNavBar'
+import Logo from './src/app/components/Logo'
 
 
 export default defineConfig({
