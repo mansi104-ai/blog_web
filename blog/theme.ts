@@ -6,7 +6,8 @@ const props = {
     "--blog-web": "#F7AB0A",
     "--my-red": "#db4437",
     "--my-yellow":"#f4b400",
-    "--my-green" : "#0f9d58"
+    "--my-green" : "#0f9d58",
+    "--my-purple" : "#3f026e"
 };
 
 

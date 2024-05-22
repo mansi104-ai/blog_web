@@ -1,6 +1,7 @@
 import React from "react";
 import '../globals.css';
 import Header from "../components/header";
+import Banner from "../components/Banner";
 
 export default function RootLayout({
   children,
@@ -10,9 +11,11 @@ export default function RootLayout({
 ){
   return (
     <html>
+      <body>
       <Header />
-      {/*Banner*/}
-      <body>{children}</body>
+      <Banner />
+      {children}
+      </body>
     </html>
   )
 }
