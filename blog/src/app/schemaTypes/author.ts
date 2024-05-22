@@ -1,5 +1,5 @@
 import {defineField, defineType} from 'sanity'
-
+import '../globals.css';
 export default defineType({
   name: 'author',
   title: 'Author',
