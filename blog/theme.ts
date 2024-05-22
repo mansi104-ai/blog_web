@@ -35,3 +35,5 @@ export const myTheme = buildLegacyTheme({ /* Base theme colors */
 
 // "--focus-color": props ["--papafam-brand"],
 });
+
+export default myTheme;
