@@ -1,18 +1,9 @@
-import {createClient} from "next-sanity";
-import
+import sanityClient from '@sanity/client';
 
-import {
-    NEXT_PUBLIC_SANITY_DATASET,
-    NEXT_PUBLIC_SANITY_PROJECT_ID,
-
-    
-  }
-
-export const client = createClient({
-    projectId,
-    dataset,
-    apiVersion,
-    useCdn : isPreviewMode ? false :true,
-    perspective : isPreviewMode  ? 'previewDrafts' : "published",
-    token : isPreviewMode ? PUBLIC
+export const client = sanityClient({
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  useCdn: false,
 });
+
+export default client;
