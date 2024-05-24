@@ -11,7 +11,7 @@ function Banner(){
         </h2>
     
       </div>
-      <p className="mt-5 md:mt-2 text-gray-300 max-w-sm">
+      <p className="mt-5 md:mt-2 text-gray-500 max-w-sm">
         MLOps | Cyber Security | Data Analysis | debugging && more
       </p>
     </div>;

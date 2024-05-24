@@ -1,8 +1,8 @@
-import { draftMode } from 'next/headers'
- 
-export async function GET(request: Request) {
-  draftMode().disable()
-  return new Response('Draft mode is disabled')
-}
+import { NextApiRequest, NextApiResponse } from 'next';
+import { draftMode } from 'next/headers';
 
-export default GET;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.setDraftMode({enable : false});
+  res.writeHead(307,{Location : "/"});
+  res.end();
+}
