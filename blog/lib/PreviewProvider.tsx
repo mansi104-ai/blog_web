@@ -2,17 +2,18 @@
 import { LiveQueryProvider } from '@sanity/preview-kit';
 import { client } from './sanity.client';
 
-export default function PreviewProvider({
+export function PreviewProvider({
   children,
-  token,
 }: {
+  // token: string;
   children: React.ReactNode;
-  token: string;
 }) {
-  if (!token) throw new TypeError('Missing token');
+  // if (!token) throw new TypeError('Missing token');
   return (
-    <LiveQueryProvider client={client} token={token}>
+    <LiveQueryProvider client={client} >
       {children}
     </LiveQueryProvider>
   );
 }
+
+export default PreviewProvider;
