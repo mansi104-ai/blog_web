@@ -1,6 +1,6 @@
-import sanityClient from '@sanity/client';
+import createClient from '@sanity/client';
 
-export const client = sanityClient({
+export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
   useCdn: false,
