@@ -5,7 +5,7 @@ import { groq } from "next-sanity";
 import { client } from "../../../lib/sanity.client";
 import { Suspense } from "react";
 import {PreviewBlogList} from "../components/PreviewBlogList";
-
+import {BlogList} from "../components/BlogList";
 const query = groq`
   *[_type =='post']{
     ...,
@@ -46,25 +46,20 @@ async function DraftPreviewContent() {
 
   const posts = await client.fetch(query);
 
-  return (
-    <div>
-      <h2>Draft Preview</h2>
-      <BlogList posts={posts} />
-    </div>
-  );
+  return <BlogList posts={posts} />
 }
 
-function BlogList({ posts }: { posts: any[] }) {
-  return (
-    <div>
-      {posts.map((post) => (
-        <div key={post._id}>
-          <h3>{post.title}</h3>
-          <p>{post.author.name}</p>
-          <p>{post.categories.map((category: any) => category.title).join(", ")}</p>
-          <p>{post.excerpt}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
+// function BlogList({ posts }: { posts: any[] }) {
+//   return (
+//     <div>
+//       {posts.map((post) => (
+//         <div key={post._id}>
+//           <h3>{post.title}</h3>
+//           <p>{post.author.name}</p>
+//           <p>{post.categories.map((category: any) => category.title).join(", ")}</p>
+//           <p>{post.excerpt}</p>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
