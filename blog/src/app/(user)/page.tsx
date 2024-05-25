@@ -5,7 +5,7 @@ import { groq } from "next-sanity";
 import { client } from "../../../lib/sanity.client";
 import { Suspense } from "react";
 import {PreviewBlogList} from "../components/PreviewBlogList";
-import {BlogList} from "../components/BlogList";
+import BlogList from "../components/BlogList";
 const query = groq`
   *[_type =='post']{
     ...,

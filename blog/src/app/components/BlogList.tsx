@@ -1,11 +1,12 @@
-import React from 'react'
+// import React from 'react'
 import type { Post } from '../../../typings.d.ts';
 type Props = {
   posts : Post[];
 
 };
 
-async function BlogList({posts}:Props) {
+function BlogList({posts}:Props) {
+  console.log(posts.length);
   return (
     <div>
       Bloglist
