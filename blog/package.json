@@ -13,7 +13,7 @@
     "@portabletext/react": "^3.0.18",
     "@sanity/cli": "^3.42.1",
     "@sanity/client": "^6.18.2",
-    "@sanity/image-url": "1",
+    "@sanity/image-url": "^1.0.2",
     "@sanity/preview-kit": "^5.0.58",
     "@sanity/react-loader": "^1.9.19",
     "@sanity/vision": "^3.42.1",
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@sanity/eslint-config-studio": "4.0.0",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "@types/lodash": "^4.17.4",
     "@types/node": "^20",
     "@types/prop-types": "^15.7.12",

@@ -11,6 +11,8 @@ type Base = {
 };
 
 interface Post extends BASE{
+    _createdAt: ReactI18NextChildren | Iterable<ReactI18NextChildren>;
+    _id: Key | null | undefined;
     author : Author;
     body : Block[];
     categories : Category[];

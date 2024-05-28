@@ -4,7 +4,7 @@ import { draftMode } from "next/headers";
 import { groq } from "next-sanity";
 import { client } from "../../../lib/sanity.client";
 import { Suspense } from "react";
-import {PreviewBlogList} from "../components/PreviewBlogList";
+// import {PreviewBlogList} from "../components/PreviewBlogList";
 import BlogList from "../components/BlogList";
 const query = groq`
   *[_type =='post']{
@@ -21,7 +21,7 @@ export default async function Home() {
     return (
       <Content>
         <Suspense fallback={<p>Loading draft preview...</p>}>
-          <PreviewBlogList query = {query} />
+          {/* <PreviewBlogList query = {query} /> */}
           <DraftPreviewContent />
         </Suspense>
       </Content>
