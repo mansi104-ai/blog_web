@@ -6,7 +6,7 @@ import urlFor from '../../../../../lib/urlFor';
 import Image from 'next/image.js';
 import { PortableText } from 'next-sanity';
 import { RichTextComponents } from '../../../components/RichTextComponents';
-import type{ Post } from '../../../../../typings';
+// import type{ Post } from '../../../../../typings';
 // import { Post } from '../../../../../typings';
 
 type Props = {
@@ -14,19 +14,6 @@ type Props = {
     slug: string;
   };
 };
-
-// export async function generateStaticParams() {
-//   const query = groq`*[_type == 'post']{
-//     slug
-//   }`;
-
-//   const slugs: Post[] = await client.fetch(query);
-//   const slugRoutes = slugs.map((slug) => slug.slug.current);
-
-//   return slugRoutes.map((slug) => ({
-//     slug,
-//   }));
-// }
 
 async function Post({ params: { slug } }: Props) {
   const query = groq`
@@ -46,4 +33,6 @@ async function Post({ params: { slug } }: Props) {
     </article>
   );
 }
+
+export default Post;
 
